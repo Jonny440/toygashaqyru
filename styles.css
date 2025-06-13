@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'greatvibes';
+    src: url('greatvibes.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+:root {
+    --primary: #ffeded;
+    --accent: #c44;
+    --text: #333;
+    --font-main: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--text);
+    line-height: 1.6;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .divider {
+    border: none;
+    height: 2px;
+    background: rgba(0,0,0); /* светлая линия */
+    margin: 60px auto;
+    max-width: 300px;
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  /* Invitation */
+  .invitation {
+    font-family: "greatvibes", Arial, sans-serif;
+    text-align: center; /* Центрирует текст */
+    padding: 40px 20px;  /* Добавляет отступы */
+  }
+  
+  .invitation p {
+    font-size: 3rem; /* или задать точно: 2rem */
+    line-height: 1.2; /* для лучшего читаемости */
+  }
+  
+  /* Calendar */
+  .calendar {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .calendar-box {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 20px 40px;
+  }
+  
+  .calendar-box .day {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .calendar-box .month {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  
+  .calendar-box .year {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Map */
+  .map {
+    padding: 40px 0;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+  
+  /* Countdown */
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирует содержимое по вертикали */
+    align-items: center;
+    height: 500px;
+    padding: 20px;
+    text-align: center;
+    background: url('flowers.jpg') center center no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    font-family: monospace;
+  }
+  
+  .time-number {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .time-label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 4px;
+  }
+  
+  .separator {
+    font-size: 3rem;
+    line-height: 1;
+    transform: translateY(10px); /* Чуть ниже */
+  }
+  
+  /* Mobile adaptation */
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .calendar-box {
+      padding: 15px 30px;
+    }
+  
+    .calendar-box .day {
+      font-size: 2.5rem;
+    }
+  }
+  .calendar-header h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .weekday {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .day {
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .day.empty {
+    background: transparent;
+    visibility: hidden;
+  }
+  
+  .day.highlight {
+    background-color: #c44;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  .location {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.2rem;
+  }
+  
+  .map-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #c44;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .map-button:hover {
+    background-color: #a22;
+  }
