@@ -4,6 +4,14 @@
     font-weight: normal;
     font-style: normal;
   }
+  
+  @font-face {
+    font-family: 'playfair';
+    src: url('playfair.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 :root {
     --primary: #ffeded;
     --accent: #c44;
@@ -24,34 +32,61 @@
     border: none;
     height: 2px;
     background: rgba(0,0,0); /* светлая линия */
-    margin: 60px auto;
+    margin: 30px auto;
     max-width: 300px;
   }
   
   /* Hero */
   .hero {
-    text-align: center;
-    padding: 80px 20px;
-    height: 100vh; /* Full screen height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: none;
   }
-  
-  .hero h1 {
-    font-size: 3rem;
+    .hero-date {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    color: var(--text);
+  }
+
+  .hero-location {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text);
+  }
+
+  .hero-names {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-family: 'playfair', cursive;
+    color: #222;
     margin-bottom: 10px;
   }
-  
-  .hero p {
-    font-size: 1.2rem;
+
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background-color: var(--text);
+    border: none;
+    margin: 10px 0;
   }
-  
+
   .subtitle {
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    width: 180px;
+    height: auto;
+    margin-top: 12px;
   }
   
   /* Invitation */
@@ -147,6 +182,18 @@
   
   /* Mobile adaptation */
   @media (max-width: 600px) {
+    .hero-date,
+    .hero-location {
+      font-size: 1rem;
+    }
+
+    .hero-names {
+      font-size: 2.5rem;
+    }
+
+    .hero-image {
+      max-width: 180px;
+    }
     .invitation p {
       font-size: 1.4rem;
       line-height: 1.4;
