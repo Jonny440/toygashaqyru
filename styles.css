@@ -147,16 +147,31 @@
   
   /* Mobile adaptation */
   @media (max-width: 600px) {
-    .hero h1 {
-      font-size: 2rem;
+    .invitation p {
+      font-size: 1.4rem;
+      line-height: 1.4;
     }
   
-    .calendar-box {
-      padding: 15px 30px;
+    .countdown {
+      padding: 30px 10px;
+      height: auto;
     }
   
-    .calendar-box .day {
+    .timer {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .time-number {
       font-size: 2.5rem;
+    }
+  
+    .time-label {
+      font-size: 1rem;
+    }
+  
+    .separator {
+      display: none;
     }
   }
   .calendar-header h2 {
